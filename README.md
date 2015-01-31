@@ -1,6 +1,8 @@
 subnodes
 ========
 
+![](https://david-dm.org/chootka/subnodes.svg)
+
 Subnodes is an open source project that enables people to easily set up a mesh node and wireless access point for serving content.
 This project is an initiative focused on streamlining the process of setting up a Raspberry Pi as a wireless access
 point for distributing content, media, and shared digital experiences. The device behaves as a web server, creating
@@ -14,27 +16,28 @@ been provided by Eyebeam. This code is published under the [AGPLv3](http://www.g
 
 how to install
 --------------
-Assuming you are starting with a fresh Rasbian install on your SD card, these are the steps for installing subnodes on your Raspberry Pi. It is also assumed that you have two wireless USB adapters attached to your RPi. They both must be running the nl80211 driver.
+Assuming you are starting with a fresh [Raspbian](http://www.raspberrypi.org/downloads/) (Version September 2014) install on your SD card, these are the steps for installing subnodes on your Raspberry Pi. It is also assumed that you have two wireless USB adapters attached to your RPi. They both must be running the nl80211 driver.
 
 * set up your Raspberry Pi with a basic configuration
-sudo raspi-config
+
+        sudo raspi-config
 
 * update apt-get
-sudo apt-get update
 
-* make a directory for your web apps (optional, but suggested)
+        sudo apt-get update
+
+* make a directory for your web apps
 mkdir www
 cd www
 
-* install git
-sudo apt-get install git-core
-
 * clone the repository into your www folder
-git clone https://github.com/chootka/subnodes.git
+
+        git clone https://github.com/chootka/subnodes.git
 
 * run the installation script
-cd subnodes/scripts
-sudo ./configure.sh
+
+        cd subnodes/scripts
+        sudo ./configure.sh
 
 The installation process takes about 15 minutes. After it has completed, you will have a running BATMAN Advanced mesh node and will be broadcasting a wireless local area network named `subnodes`. Connecting to the network and navigating to a browser page will redirect you to http://www.hotprobs.com, where a node.js chat client will be running. 
 
