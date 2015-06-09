@@ -1,4 +1,5 @@
 _dev/
+node_latest_armhf.deb
 .DS_Store
 final_instructions.rtf
 node_modules
@@ -8,3 +9,5 @@ scripts/content.js
 scripts/haproxy.cfg
 scripts/node_install.sh
 scripts/__notused
+_untracked
+_untracked/*
